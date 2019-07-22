@@ -8,13 +8,14 @@
  *
  * @author pro
  */
-public class SampleFrame extends java.awt.Frame {
+public class MyFrame extends java.awt.Frame {
 
     /**
-     * Creates new form SampleFrame
+     * Creates new form MyFrame
      */
-    public SampleFrame() {
+    public MyFrame() {
         initComponents();
+        setSize(400,400);
     }
 
     /**
@@ -25,9 +26,13 @@ public class SampleFrame extends java.awt.Frame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        label1 = new java.awt.Label();
         textField1 = new java.awt.TextField();
+        textField2 = new java.awt.TextField();
         button1 = new java.awt.Button();
+        button2 = new java.awt.Button();
+        panel1 = new java.awt.Panel();
+        button3 = new java.awt.Button();
+        button4 = new java.awt.Button();
 
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -35,16 +40,37 @@ public class SampleFrame extends java.awt.Frame {
             }
         });
         setLayout(null);
-
-        label1.setText("Your Name");
-        add(label1);
-        label1.setBounds(40, 60, 90, 50);
         add(textField1);
-        textField1.setBounds(150, 60, 150, 50);
+        textField1.setBounds(80, 60, 60, 20);
 
-        button1.setLabel("SaveData");
+        textField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textField2ActionPerformed(evt);
+            }
+        });
+        add(textField2);
+        textField2.setBounds(170, 60, 60, 20);
+
+        button1.setLabel("Copy");
         add(button1);
-        button1.setBounds(130, 220, 90, 50);
+        button1.setBounds(80, 120, 60, 24);
+
+        button2.setLabel("Clear");
+        add(button2);
+        button2.setBounds(170, 120, 60, 24);
+
+        panel1.setLayout(null);
+
+        button3.setLabel("button3");
+        panel1.add(button3);
+        button3.setBounds(40, 40, 57, 24);
+
+        button4.setLabel("button4");
+        panel1.add(button4);
+        button4.setBounds(150, 40, 57, 24);
+
+        add(panel1);
+        panel1.setBounds(40, 190, 270, 100);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -56,13 +82,17 @@ public class SampleFrame extends java.awt.Frame {
         System.exit(0);
     }//GEN-LAST:event_exitForm
 
+    private void textField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textField2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SampleFrame().setVisible(true);
+                new MyFrame().setVisible(true);
             }
         });
     }
@@ -70,7 +100,11 @@ public class SampleFrame extends java.awt.Frame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button button1;
-    private java.awt.Label label1;
+    private java.awt.Button button2;
+    private java.awt.Button button3;
+    private java.awt.Button button4;
+    private java.awt.Panel panel1;
     private java.awt.TextField textField1;
+    private java.awt.TextField textField2;
     // End of variables declaration//GEN-END:variables
 }
